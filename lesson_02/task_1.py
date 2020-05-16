@@ -13,21 +13,15 @@ while True:
     if symbol in ('0', '+', '-', '*', '/'):
         if symbol == '0':
             break
-        elif symbol == '+':
-            digit_1 = int(input('Введите первое число: '))
-            digit_2 = int(input('Введите второе число: '))
+        digit_1 = int(input('Введите первое число: '))
+        digit_2 = int(input('Введите второе число: '))
+        if symbol == '+':
             print(f'{digit_1} + {digit_2} = {digit_1 + digit_2}')
-        elif symbol == '-':
-            digit_1 = int(input('Введите первое число: '))
-            digit_2 = int(input('Введите второе число: '))
+        if symbol == '-':
             print(f'{digit_1} - {digit_2} = {digit_1 - digit_2}')
-        elif symbol == '*':
-            digit_1 = int(input('Введите первое число: '))
-            digit_2 = int(input('Введите второе число: '))
+        if symbol == '*':
             print(f'{digit_1} * {digit_2} = {digit_1 * digit_2}')
-        elif symbol == '/':
-            digit_1 = int(input('Введите первое число: '))
-            digit_2 = int(input('Введите второе число: '))
+        if symbol == '/':
             if digit_2 == 0:
                 print('На ноль делить нельзя! Плохой пользователь!')
             else:
