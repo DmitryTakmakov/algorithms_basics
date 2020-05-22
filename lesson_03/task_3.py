@@ -16,8 +16,9 @@ for number in array:
     if number < min_value:
         min_value = number
 print(f'Минимальный элемент в массиве - {min_value}, максимальный - {max_value}')
-min_instance_counter = 0
-max_instance_counter = 0
+BASE = 0
+min_instance_counter = BASE
+max_instance_counter = BASE
 for idx, number_ in enumerate(array[:]):
     if number_ == min_value and min_instance_counter == 0:
         array[idx] = max_value
