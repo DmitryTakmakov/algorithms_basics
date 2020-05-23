@@ -8,8 +8,8 @@ MAX_ITEM = 100
 array = [random.randint(MIN_ITEM, MAX_ITEM) for _ in range(SIZE)]
 print(*array)
 
-min_value = MAX_ITEM  # если здесь также оставить 0, то там всегда 0 и будет
-max_value = MIN_ITEM
+min_value = array[0]
+max_value = array[0]
 for number in array:
     if number > max_value:
         max_value = number
