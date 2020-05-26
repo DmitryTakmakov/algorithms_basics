@@ -6,8 +6,8 @@ import timeit
 import cProfile
 
 
-def my_array_max(min_value, max_value, size):
-    array = [random.randint(min_value, max_value) for _ in range(size)]
+def my_array_max(size):
+    array = [random.randint(0, 100) for _ in range(size)]
     temp_array = []
     results_array = []
     for number in array:
@@ -117,8 +117,8 @@ cProfile.run('my_array_max(0, 100, 640)')
 # словарь - это по-пацански :)
 
 
-def teacher_array_max(min_value, max_value, size):
-    array = [random.randint(min_value, max_value) for _ in range(size)]
+def teacher_array_max(size):
+    array = [random.randint(0, 100) for _ in range(size)]
     counter = {}
     frequency = 1
     num = None
