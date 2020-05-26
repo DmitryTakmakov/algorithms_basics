@@ -1,5 +1,6 @@
 # в качестве основы я решил выбрать свое многострадальное четвертое задание из третьего урока. уж больно громоздкое
 # получилось решение у меня - как раз хороший вариант для медленного и неэффективного кода
+
 # с моего варианта решения и начнем
 import random
 import timeit
@@ -210,3 +211,113 @@ cProfile.run('teacher_array_max(640)')
 #       640    0.000    0.000    0.000    0.000 {method 'bit_length' of 'int' objects}
 #         1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
 #       805    0.000    0.000    0.000    0.000 {method 'getrandbits' of '_random.Random' objects}
+
+# третий вариант. ох, как же хотелось здесь использовать какой-нибудь Counter)) ну, пусть будет метод count - он
+# хотя бы созвучен, да и какого-то прям радикально другого решения для этой задачи я так и не придумал, увы :'(
+
+
+def stupid_array_max(size):
+    array = [random.randint(0, 100) for _ in range(size)]
+    max_number = array[0]
+    max_ = 0
+    for number in array:
+        temp_c = array.count(number)
+        if temp_c > 1:
+            if temp_c > max_:
+                max_ = temp_c
+                max_number = number
+    if max_ != 0:
+        return f'Число {max_number} встречается в массиве {max_} раз(а).'
+    else:
+        return f'Все числа в массиве встречаются по одному разу.'
+
+
+# я прекрасно отдаю себе отчет, что это, по сути, ваше решение, переписанное с методом count, но если я буду и дальше
+# биться головой в эту задачу, то я рискую не доделать это задание и к следующему дедлайну. наверное, я просто тупой.
+
+print(timeit.timeit('stupid_array_max(20)', number=10000, globals=globals()))  # 0.25043038799776696
+print(timeit.timeit('stupid_array_max(40)', number=10000, globals=globals()))  # 0.5532171669983654
+print(timeit.timeit('stupid_array_max(80)', number=10000, globals=globals()))  # 1.45620129800227
+print(timeit.timeit('stupid_array_max(160)', number=10000, globals=globals()))  # 4.517073426002753
+print(timeit.timeit('stupid_array_max(320)', number=10000, globals=globals()))  # 15.735445995000191
+print(timeit.timeit('stupid_array_max(640)', number=10000, globals=globals()))  # 59.754649876995245
+
+cProfile.run('stupid_array_max(20)')
+#         1    0.000    0.000    0.000    0.000 <string>:1(<module>)
+#        20    0.000    0.000    0.000    0.000 random.py:200(randrange)
+#        20    0.000    0.000    0.000    0.000 random.py:244(randint)
+#        20    0.000    0.000    0.000    0.000 random.py:250(_randbelow_with_getrandbits)
+#         1    0.000    0.000    0.000    0.000 task_1.py:218(stupid_array_max)
+#         1    0.000    0.000    0.000    0.000 task_1.py:219(<listcomp>)
+#         1    0.000    0.000    0.000    0.000 {built-in method builtins.exec}
+#        20    0.000    0.000    0.000    0.000 {method 'bit_length' of 'int' objects}
+#        20    0.000    0.000    0.000    0.000 {method 'count' of 'list' objects}
+#         1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+#        24    0.000    0.000    0.000    0.000 {method 'getrandbits' of '_random.Random' objects}
+cProfile.run('stupid_array_max(40)')
+#         1    0.000    0.000    0.000    0.000 <string>:1(<module>)
+#        40    0.000    0.000    0.000    0.000 random.py:200(randrange)
+#        40    0.000    0.000    0.000    0.000 random.py:244(randint)
+#        40    0.000    0.000    0.000    0.000 random.py:250(_randbelow_with_getrandbits)
+#         1    0.000    0.000    0.000    0.000 task_1.py:218(stupid_array_max)
+#         1    0.000    0.000    0.000    0.000 task_1.py:219(<listcomp>)
+#         1    0.000    0.000    0.000    0.000 {built-in method builtins.exec}
+#        40    0.000    0.000    0.000    0.000 {method 'bit_length' of 'int' objects}
+#        40    0.000    0.000    0.000    0.000 {method 'count' of 'list' objects}
+#         1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+#        48    0.000    0.000    0.000    0.000 {method 'getrandbits' of '_random.Random' objects}
+cProfile.run('stupid_array_max(80)')
+#         1    0.000    0.000    0.000    0.000 <string>:1(<module>)
+#        80    0.000    0.000    0.000    0.000 random.py:200(randrange)
+#        80    0.000    0.000    0.000    0.000 random.py:244(randint)
+#        80    0.000    0.000    0.000    0.000 random.py:250(_randbelow_with_getrandbits)
+#         1    0.000    0.000    0.000    0.000 task_1.py:218(stupid_array_max)
+#         1    0.000    0.000    0.000    0.000 task_1.py:219(<listcomp>)
+#         1    0.000    0.000    0.000    0.000 {built-in method builtins.exec}
+#        80    0.000    0.000    0.000    0.000 {method 'bit_length' of 'int' objects}
+#        80    0.000    0.000    0.000    0.000 {method 'count' of 'list' objects}
+#         1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+#       104    0.000    0.000    0.000    0.000 {method 'getrandbits' of '_random.Random' objects}
+cProfile.run('stupid_array_max(160)')
+#         1    0.000    0.000    0.001    0.001 <string>:1(<module>)
+#       160    0.000    0.000    0.000    0.000 random.py:200(randrange)
+#       160    0.000    0.000    0.000    0.000 random.py:244(randint)
+#       160    0.000    0.000    0.000    0.000 random.py:250(_randbelow_with_getrandbits)
+#         1    0.000    0.000    0.001    0.001 task_1.py:218(stupid_array_max)
+#         1    0.000    0.000    0.000    0.000 task_1.py:219(<listcomp>)
+#         1    0.000    0.000    0.001    0.001 {built-in method builtins.exec}
+#       160    0.000    0.000    0.000    0.000 {method 'bit_length' of 'int' objects}
+#       160    0.000    0.000    0.000    0.000 {method 'count' of 'list' objects}
+#         1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+#       194    0.000    0.000    0.000    0.000 {method 'getrandbits' of '_random.Random' objects}
+cProfile.run('stupid_array_max(320)')
+#         1    0.000    0.000    0.002    0.002 <string>:1(<module>)
+#       320    0.000    0.000    0.000    0.000 random.py:200(randrange)
+#       320    0.000    0.000    0.001    0.000 random.py:244(randint)
+#       320    0.000    0.000    0.000    0.000 random.py:250(_randbelow_with_getrandbits)
+#         1    0.000    0.000    0.002    0.002 task_1.py:218(stupid_array_max)
+#         1    0.000    0.000    0.001    0.001 task_1.py:219(<listcomp>)
+#         1    0.000    0.000    0.002    0.002 {built-in method builtins.exec}
+#       320    0.000    0.000    0.000    0.000 {method 'bit_length' of 'int' objects}
+#       320    0.002    0.000    0.002    0.000 {method 'count' of 'list' objects}
+#         1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+#       409    0.000    0.000    0.000    0.000 {method 'getrandbits' of '_random.Random' objects}
+cProfile.run('stupid_array_max(640)')
+#         1    0.000    0.000    0.009    0.009 <string>:1(<module>)
+#       640    0.001    0.000    0.001    0.000 random.py:200(randrange)
+#       640    0.000    0.000    0.001    0.000 random.py:244(randint)
+#       640    0.000    0.000    0.001    0.000 random.py:250(_randbelow_with_getrandbits)
+#         1    0.000    0.000    0.009    0.009 task_1.py:218(stupid_array_max)
+#         1    0.000    0.000    0.002    0.002 task_1.py:219(<listcomp>)
+#         1    0.000    0.000    0.009    0.009 {built-in method builtins.exec}
+#       640    0.000    0.000    0.000    0.000 {method 'bit_length' of 'int' objects}
+#       640    0.007    0.000    0.007    0.000 {method 'count' of 'list' objects}
+#         1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+#       822    0.000    0.000    0.000    0.000 {method 'getrandbits' of '_random.Random' objects}
+
+"""
+Вывод:
+В принципе, во всех вариантах функции наблюдается линейный рост - при увеличении N в два раза времени на выполнение
+затрачивается в 3 раза больше, кроме второго варианта - там прямая не столь резко взлетает вверх.
+Что и делает второй вариант самой лучшей реализацией из представленных, что, впрочем, и не удивительно.
+"""
