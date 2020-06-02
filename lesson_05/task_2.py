@@ -22,24 +22,43 @@ def my_hex_out(integer):
             return key
 
 
-a = deque(input('Введите шестнадцатеричное число: '))
-b = deque(input('Введите еще одно шестнадцатеричное число: '))
-
-if len(a) > len(b):
-    while len(b) < len(a):
-        b.appendleft('0')
-else:
-    while len(a) < len(b):
-        a.appendleft('0')
-
-result = deque()
-
-for idx, element in enumerate(b):
-    temp = my_hex_in(element) + my_hex_in(a[idx])
-    if temp == 16:
-        result.append('1')
-    elif temp > 16:
-        result.append(my_hex_out(temp % 16))
+def hex_sum(a: deque, b: deque):
+    a = a.copy()
+    b = b.copy()
+    if len(a) > len(b):
+        while len(b) < len(a):
+            b.appendleft('0')
     else:
-        result.append(my_hex_out(temp))
-print(result)
+        while len(a) < len(b):
+            a.appendleft('0')
+
+    a = deque(reversed(a))
+    b = deque(reversed(b))
+    result = deque()
+    for idx, element in enumerate(b):
+        if len(result) > 0 and result[0] == 1:
+            temp = my_hex_in(element) + my_hex_in(a[idx]) + result.popleft()
+            if temp == 16:
+                result.append('1')
+            elif temp > 16:
+                result.appendleft(my_hex_out(temp % 16))
+                result.appendleft(1)
+            else:
+                result.appendleft(my_hex_out(temp))
+        else:
+            temp = my_hex_in(element) + my_hex_in(a[idx])
+            if temp == 16:
+                result.append('1')
+            elif temp > 16:
+                result.appendleft(my_hex_out(temp % 16))
+                result.appendleft(1)
+            else:
+                result.appendleft(my_hex_out(temp))
+    return result
+
+
+number_1 = deque(input('Введите шестнадцатеричное число: '))
+number_2 = deque(input('Введите еще одно шестнадцатеричное число: '))
+sum_ = hex_sum(number_1, number_2)
+
+print(f'Результат сложения чисел: {list(sum_)}')
