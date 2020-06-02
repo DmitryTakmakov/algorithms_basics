@@ -23,7 +23,7 @@ def my_hex_out(integer):
 
 
 def hex_sum(a: deque, b: deque):
-    a = a.copy()
+    a = a.copy()  # ну ладно, это фишку я запомнил с урока)
     b = b.copy()
     if len(a) > len(b):
         while len(b) < len(a):
@@ -59,6 +59,5 @@ def hex_sum(a: deque, b: deque):
 
 number_1 = deque(input('Введите шестнадцатеричное число: '))
 number_2 = deque(input('Введите еще одно шестнадцатеричное число: '))
-sum_ = hex_sum(number_1, number_2)
 
-print(f'Результат сложения чисел: {list(sum_)}')
+print(f'Результат сложения чисел: {list(hex_sum(number_1, number_2))}')
