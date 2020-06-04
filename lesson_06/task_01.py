@@ -35,18 +35,16 @@ class MemoryChecker:
                 for key, value in object.items():
                     self._memory_check(key)
                     self._memory_check(value)
-                    self._type_size(key)
-                    self._type_size(value)
             elif not isinstance(object, str):
                 for item in object:
                     self._memory_check(item)
-                    self._type_size(item)
 
     def __str__(self):
         return f'Всего переменные заняли {self._size} байт.\n' + '\n'.join([f'Переменные {key} заняли {value} байт' for
                                                                             key, value in self._object_types.items()])
 
 
+# вариант 1 - с урока
 SIZE = 1000
 MIN_ITEM = 0
 MAX_ITEM = 200
@@ -61,9 +59,9 @@ for number in array:
     if number < min_value:
         min_value = number
 print(f'Минимальный элемент в массиве - {min_value}, максимальный - {max_value}')
-base = 0
-min_instance_counter = base
-max_instance_counter = base
+BASE = 0
+min_instance_counter = BASE
+max_instance_counter = BASE
 for idx, number_ in enumerate(array[:]):
     if number_ == min_value and min_instance_counter == 0:
         array[idx] = max_value
@@ -74,5 +72,38 @@ for idx, number_ in enumerate(array[:]):
 print(*array)
 
 mem_check = MemoryChecker()
-mem_check.check(array, min_value, max_value)
+mem_check.check(array, min_value, max_value, min_instance_counter, max_instance_counter)
 print(mem_check)
+print('*' * 100)
+
+# вариант 2, все то же самое, но со словарем (я уже говорил. что словари это по-пацански) и бонусным списком!
+SIZE = 1000
+MIN_ITEM = 0
+MAX_ITEM = 200
+array_2 = [random.randint(MIN_ITEM, MAX_ITEM) for _ in range(SIZE)]
+print(*array_2)
+
+values = {min_value: array[0], max_value: array[0]}
+for number in array:
+    if number > values[max_value]:
+        values[max_value] = number
+    if number < values[min_value]:
+        values[min_value] = number
+print(f'Минимальный элемент в массиве - {values[min_value]}, максимальный - {values[max_value]}')
+BASE = 0
+min_instance_counter = BASE
+max_instance_counter = BASE
+a = array_2.copy()
+for idx, number_ in enumerate(a):
+    if number_ == values[min_value] and min_instance_counter == 0:
+        a[idx] = values[max_value]
+        min_instance_counter += 1
+    if number_ == values[max_value] and max_instance_counter == 0:
+        a[idx] = values[min_value]
+        max_instance_counter += 1
+print(*a)
+
+mem_check = MemoryChecker()
+mem_check.check(array_2, values, min_instance_counter, max_instance_counter, a)
+print(mem_check)
+print('*' * 100)
