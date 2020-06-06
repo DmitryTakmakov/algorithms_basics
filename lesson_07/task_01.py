@@ -7,22 +7,21 @@ import random
 
 def reverse_bubble_sort(array: list):
     array = array.copy()
-    n = 1
     is_sorted = False
     """
     это счетчик на случай, если массив был уже отсортирован, чтобы не гонять алгоритм почем зря.
     вот такую простенькую рекомендацию по улучшению сортировки пузырьком я нашел в интернете :)
     но алгоритм действительно умнее себя ведет - всего лишь 1 проход цикла, если загонять туда уже заранее 
-    отсортированный массив.
+    отсортированный массив. Кстати, получается переменная n вообще не нужна? массив, в конце концов, так или иначе
+    будет отсортирован и цикл завершится на is_sorted = True
     """
-    while n < len(array):
+    while True:
         if not is_sorted:
             is_sorted = True
             for i in range(len(array) - 1):
                 if array[i] < array[i + 1]:
                     array[i], array[i + 1] = array[i + 1], array[i]
                     is_sorted = False
-            n += 1
         else:
             break
 
