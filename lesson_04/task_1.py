@@ -46,8 +46,8 @@ cProfile.run('my_array_max(20)')
 #        20    0.000    0.000    0.000    0.000 random.py:200(randrange)
 #        20    0.000    0.000    0.000    0.000 random.py:244(randint)
 #        20    0.000    0.000    0.000    0.000 random.py:250(_randbelow_with_getrandbits)
-#         1    0.000    0.000    0.000    0.000 task_1.py:10(<listcomp>)
-#         1    0.000    0.000    0.000    0.000 task_1.py:9(my_array_max)
+#         1    0.000    0.000    0.000    0.000 task_01.py:10(<listcomp>)
+#         1    0.000    0.000    0.000    0.000 task_01.py:9(my_array_max)
 #         1    0.000    0.000    0.000    0.000 {built-in method builtins.exec}
 #        24    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
 #        20    0.000    0.000    0.000    0.000 {method 'bit_length' of 'int' objects}
@@ -58,8 +58,8 @@ cProfile.run('my_array_max(40)')
 #        40    0.000    0.000    0.000    0.000 random.py:200(randrange)
 #        40    0.000    0.000    0.000    0.000 random.py:244(randint)
 #        40    0.000    0.000    0.000    0.000 random.py:250(_randbelow_with_getrandbits)
-#         1    0.000    0.000    0.000    0.000 task_1.py:10(<listcomp>)
-#         1    0.000    0.000    0.000    0.000 task_1.py:9(my_array_max)
+#         1    0.000    0.000    0.000    0.000 task_01.py:10(<listcomp>)
+#         1    0.000    0.000    0.000    0.000 task_01.py:9(my_array_max)
 #         1    0.000    0.000    0.000    0.000 {built-in method builtins.exec}
 #        52    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
 #        40    0.000    0.000    0.000    0.000 {method 'bit_length' of 'int' objects}
@@ -70,8 +70,8 @@ cProfile.run('my_array_max(80)')
 #        80    0.000    0.000    0.000    0.000 random.py:200(randrange)
 #        80    0.000    0.000    0.000    0.000 random.py:244(randint)
 #        80    0.000    0.000    0.000    0.000 random.py:250(_randbelow_with_getrandbits)
-#         1    0.000    0.000    0.000    0.000 task_1.py:10(<listcomp>)
-#         1    0.000    0.000    0.000    0.000 task_1.py:9(my_array_max)
+#         1    0.000    0.000    0.000    0.000 task_01.py:10(<listcomp>)
+#         1    0.000    0.000    0.000    0.000 task_01.py:9(my_array_max)
 #         1    0.000    0.000    0.000    0.000 {built-in method builtins.exec}
 #       124    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
 #        80    0.000    0.000    0.000    0.000 {method 'bit_length' of 'int' objects}
@@ -82,8 +82,8 @@ cProfile.run('my_array_max(160)')
 #       160    0.000    0.000    0.000    0.000 random.py:200(randrange)
 #       160    0.000    0.000    0.000    0.000 random.py:244(randint)
 #       160    0.000    0.000    0.000    0.000 random.py:250(_randbelow_with_getrandbits)
-#         1    0.000    0.000    0.001    0.001 task_1.py:10(<listcomp>)
-#         1    0.001    0.001    0.001    0.001 task_1.py:9(my_array_max)
+#         1    0.000    0.000    0.001    0.001 task_01.py:10(<listcomp>)
+#         1    0.001    0.001    0.001    0.001 task_01.py:9(my_array_max)
 #         1    0.000    0.000    0.002    0.002 {built-in method builtins.exec}
 #       283    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
 #       160    0.000    0.000    0.000    0.000 {method 'bit_length' of 'int' objects}
@@ -94,8 +94,8 @@ cProfile.run('my_array_max(320)')
 #       320    0.000    0.000    0.000    0.000 random.py:200(randrange)
 #       320    0.000    0.000    0.000    0.000 random.py:244(randint)
 #       320    0.000    0.000    0.000    0.000 random.py:250(_randbelow_with_getrandbits)
-#         1    0.000    0.000    0.001    0.001 task_1.py:10(<listcomp>)
-#         1    0.003    0.003    0.004    0.004 task_1.py:9(my_array_max)
+#         1    0.000    0.000    0.001    0.001 task_01.py:10(<listcomp>)
+#         1    0.003    0.003    0.004    0.004 task_01.py:9(my_array_max)
 #         1    0.000    0.000    0.004    0.004 {built-in method builtins.exec}
 #       626    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
 #       320    0.000    0.000    0.000    0.000 {method 'bit_length' of 'int' objects}
@@ -106,8 +106,8 @@ cProfile.run('my_array_max(640)')
 #       640    0.001    0.000    0.001    0.000 random.py:200(randrange)
 #       640    0.000    0.000    0.001    0.000 random.py:244(randint)
 #       640    0.000    0.000    0.001    0.000 random.py:250(_randbelow_with_getrandbits)
-#         1    0.000    0.000    0.002    0.002 task_1.py:10(<listcomp>)
-#         1    0.012    0.012    0.014    0.014 task_1.py:9(my_array_max)
+#         1    0.000    0.000    0.002    0.002 task_01.py:10(<listcomp>)
+#         1    0.012    0.012    0.014    0.014 task_01.py:9(my_array_max)
 #         1    0.000    0.000    0.014    0.014 {built-in method builtins.exec}
 #      1279    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
 #       640    0.000    0.000    0.000    0.000 {method 'bit_length' of 'int' objects}
@@ -150,8 +150,8 @@ cProfile.run('teacher_array_max(20)')
 #        20    0.000    0.000    0.000    0.000 random.py:200(randrange)
 #        20    0.000    0.000    0.000    0.000 random.py:244(randint)
 #        20    0.000    0.000    0.000    0.000 random.py:250(_randbelow_with_getrandbits)
-#         1    0.000    0.000    0.000    0.000 task_1.py:120(teacher_array_max)
-#         1    0.000    0.000    0.000    0.000 task_1.py:121(<listcomp>)
+#         1    0.000    0.000    0.000    0.000 task_01.py:120(teacher_array_max)
+#         1    0.000    0.000    0.000    0.000 task_01.py:121(<listcomp>)
 #         1    0.000    0.000    0.000    0.000 {built-in method builtins.exec}
 #        20    0.000    0.000    0.000    0.000 {method 'bit_length' of 'int' objects}
 #         1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
@@ -161,8 +161,8 @@ cProfile.run('teacher_array_max(40)')
 #        40    0.000    0.000    0.000    0.000 random.py:200(randrange)
 #        40    0.000    0.000    0.000    0.000 random.py:244(randint)
 #        40    0.000    0.000    0.000    0.000 random.py:250(_randbelow_with_getrandbits)
-#         1    0.000    0.000    0.000    0.000 task_1.py:120(teacher_array_max)
-#         1    0.000    0.000    0.000    0.000 task_1.py:121(<listcomp>)
+#         1    0.000    0.000    0.000    0.000 task_01.py:120(teacher_array_max)
+#         1    0.000    0.000    0.000    0.000 task_01.py:121(<listcomp>)
 #         1    0.000    0.000    0.000    0.000 {built-in method builtins.exec}
 #        40    0.000    0.000    0.000    0.000 {method 'bit_length' of 'int' objects}
 #         1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
@@ -172,8 +172,8 @@ cProfile.run('teacher_array_max(80)')
 #        80    0.000    0.000    0.000    0.000 random.py:200(randrange)
 #        80    0.000    0.000    0.000    0.000 random.py:244(randint)
 #        80    0.000    0.000    0.000    0.000 random.py:250(_randbelow_with_getrandbits)
-#         1    0.000    0.000    0.000    0.000 task_1.py:120(teacher_array_max)
-#         1    0.000    0.000    0.000    0.000 task_1.py:121(<listcomp>)
+#         1    0.000    0.000    0.000    0.000 task_01.py:120(teacher_array_max)
+#         1    0.000    0.000    0.000    0.000 task_01.py:121(<listcomp>)
 #         1    0.000    0.000    0.000    0.000 {built-in method builtins.exec}
 #        80    0.000    0.000    0.000    0.000 {method 'bit_length' of 'int' objects}
 #         1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
@@ -183,8 +183,8 @@ cProfile.run('teacher_array_max(160)')
 #       160    0.000    0.000    0.000    0.000 random.py:200(randrange)
 #       160    0.000    0.000    0.000    0.000 random.py:244(randint)
 #       160    0.000    0.000    0.000    0.000 random.py:250(_randbelow_with_getrandbits)
-#         1    0.000    0.000    0.001    0.001 task_1.py:120(teacher_array_max)
-#         1    0.000    0.000    0.001    0.001 task_1.py:121(<listcomp>)
+#         1    0.000    0.000    0.001    0.001 task_01.py:120(teacher_array_max)
+#         1    0.000    0.000    0.001    0.001 task_01.py:121(<listcomp>)
 #         1    0.000    0.000    0.001    0.001 {built-in method builtins.exec}
 #       160    0.000    0.000    0.000    0.000 {method 'bit_length' of 'int' objects}
 #         1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
@@ -194,8 +194,8 @@ cProfile.run('teacher_array_max(320)')
 #       320    0.000    0.000    0.001    0.000 random.py:200(randrange)
 #       320    0.000    0.000    0.001    0.000 random.py:244(randint)
 #       320    0.000    0.000    0.000    0.000 random.py:250(_randbelow_with_getrandbits)
-#         1    0.000    0.000    0.001    0.001 task_1.py:120(teacher_array_max)
-#         1    0.000    0.000    0.001    0.001 task_1.py:121(<listcomp>)
+#         1    0.000    0.000    0.001    0.001 task_01.py:120(teacher_array_max)
+#         1    0.000    0.000    0.001    0.001 task_01.py:121(<listcomp>)
 #         1    0.000    0.000    0.001    0.001 {built-in method builtins.exec}
 #       320    0.000    0.000    0.000    0.000 {method 'bit_length' of 'int' objects}
 #         1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
@@ -205,8 +205,8 @@ cProfile.run('teacher_array_max(640)')
 #       640    0.001    0.000    0.001    0.000 random.py:200(randrange)
 #       640    0.000    0.000    0.002    0.000 random.py:244(randint)
 #       640    0.001    0.000    0.001    0.000 random.py:250(_randbelow_with_getrandbits)
-#         1    0.000    0.000    0.002    0.002 task_1.py:120(teacher_array_max)
-#         1    0.000    0.000    0.002    0.002 task_1.py:121(<listcomp>)
+#         1    0.000    0.000    0.002    0.002 task_01.py:120(teacher_array_max)
+#         1    0.000    0.000    0.002    0.002 task_01.py:121(<listcomp>)
 #         1    0.000    0.000    0.003    0.003 {built-in method builtins.exec}
 #       640    0.000    0.000    0.000    0.000 {method 'bit_length' of 'int' objects}
 #         1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
@@ -247,8 +247,8 @@ cProfile.run('stupid_array_max(20)')
 #        20    0.000    0.000    0.000    0.000 random.py:200(randrange)
 #        20    0.000    0.000    0.000    0.000 random.py:244(randint)
 #        20    0.000    0.000    0.000    0.000 random.py:250(_randbelow_with_getrandbits)
-#         1    0.000    0.000    0.000    0.000 task_1.py:218(stupid_array_max)
-#         1    0.000    0.000    0.000    0.000 task_1.py:219(<listcomp>)
+#         1    0.000    0.000    0.000    0.000 task_01.py:218(stupid_array_max)
+#         1    0.000    0.000    0.000    0.000 task_01.py:219(<listcomp>)
 #         1    0.000    0.000    0.000    0.000 {built-in method builtins.exec}
 #        20    0.000    0.000    0.000    0.000 {method 'bit_length' of 'int' objects}
 #        20    0.000    0.000    0.000    0.000 {method 'count' of 'list' objects}
@@ -259,8 +259,8 @@ cProfile.run('stupid_array_max(40)')
 #        40    0.000    0.000    0.000    0.000 random.py:200(randrange)
 #        40    0.000    0.000    0.000    0.000 random.py:244(randint)
 #        40    0.000    0.000    0.000    0.000 random.py:250(_randbelow_with_getrandbits)
-#         1    0.000    0.000    0.000    0.000 task_1.py:218(stupid_array_max)
-#         1    0.000    0.000    0.000    0.000 task_1.py:219(<listcomp>)
+#         1    0.000    0.000    0.000    0.000 task_01.py:218(stupid_array_max)
+#         1    0.000    0.000    0.000    0.000 task_01.py:219(<listcomp>)
 #         1    0.000    0.000    0.000    0.000 {built-in method builtins.exec}
 #        40    0.000    0.000    0.000    0.000 {method 'bit_length' of 'int' objects}
 #        40    0.000    0.000    0.000    0.000 {method 'count' of 'list' objects}
@@ -271,8 +271,8 @@ cProfile.run('stupid_array_max(80)')
 #        80    0.000    0.000    0.000    0.000 random.py:200(randrange)
 #        80    0.000    0.000    0.000    0.000 random.py:244(randint)
 #        80    0.000    0.000    0.000    0.000 random.py:250(_randbelow_with_getrandbits)
-#         1    0.000    0.000    0.000    0.000 task_1.py:218(stupid_array_max)
-#         1    0.000    0.000    0.000    0.000 task_1.py:219(<listcomp>)
+#         1    0.000    0.000    0.000    0.000 task_01.py:218(stupid_array_max)
+#         1    0.000    0.000    0.000    0.000 task_01.py:219(<listcomp>)
 #         1    0.000    0.000    0.000    0.000 {built-in method builtins.exec}
 #        80    0.000    0.000    0.000    0.000 {method 'bit_length' of 'int' objects}
 #        80    0.000    0.000    0.000    0.000 {method 'count' of 'list' objects}
@@ -283,8 +283,8 @@ cProfile.run('stupid_array_max(160)')
 #       160    0.000    0.000    0.000    0.000 random.py:200(randrange)
 #       160    0.000    0.000    0.000    0.000 random.py:244(randint)
 #       160    0.000    0.000    0.000    0.000 random.py:250(_randbelow_with_getrandbits)
-#         1    0.000    0.000    0.001    0.001 task_1.py:218(stupid_array_max)
-#         1    0.000    0.000    0.000    0.000 task_1.py:219(<listcomp>)
+#         1    0.000    0.000    0.001    0.001 task_01.py:218(stupid_array_max)
+#         1    0.000    0.000    0.000    0.000 task_01.py:219(<listcomp>)
 #         1    0.000    0.000    0.001    0.001 {built-in method builtins.exec}
 #       160    0.000    0.000    0.000    0.000 {method 'bit_length' of 'int' objects}
 #       160    0.000    0.000    0.000    0.000 {method 'count' of 'list' objects}
@@ -295,8 +295,8 @@ cProfile.run('stupid_array_max(320)')
 #       320    0.000    0.000    0.000    0.000 random.py:200(randrange)
 #       320    0.000    0.000    0.001    0.000 random.py:244(randint)
 #       320    0.000    0.000    0.000    0.000 random.py:250(_randbelow_with_getrandbits)
-#         1    0.000    0.000    0.002    0.002 task_1.py:218(stupid_array_max)
-#         1    0.000    0.000    0.001    0.001 task_1.py:219(<listcomp>)
+#         1    0.000    0.000    0.002    0.002 task_01.py:218(stupid_array_max)
+#         1    0.000    0.000    0.001    0.001 task_01.py:219(<listcomp>)
 #         1    0.000    0.000    0.002    0.002 {built-in method builtins.exec}
 #       320    0.000    0.000    0.000    0.000 {method 'bit_length' of 'int' objects}
 #       320    0.002    0.000    0.002    0.000 {method 'count' of 'list' objects}
@@ -307,8 +307,8 @@ cProfile.run('stupid_array_max(640)')
 #       640    0.001    0.000    0.001    0.000 random.py:200(randrange)
 #       640    0.000    0.000    0.001    0.000 random.py:244(randint)
 #       640    0.000    0.000    0.001    0.000 random.py:250(_randbelow_with_getrandbits)
-#         1    0.000    0.000    0.009    0.009 task_1.py:218(stupid_array_max)
-#         1    0.000    0.000    0.002    0.002 task_1.py:219(<listcomp>)
+#         1    0.000    0.000    0.009    0.009 task_01.py:218(stupid_array_max)
+#         1    0.000    0.000    0.002    0.002 task_01.py:219(<listcomp>)
 #         1    0.000    0.000    0.009    0.009 {built-in method builtins.exec}
 #       640    0.000    0.000    0.000    0.000 {method 'bit_length' of 'int' objects}
 #       640    0.007    0.000    0.007    0.000 {method 'count' of 'list' objects}
